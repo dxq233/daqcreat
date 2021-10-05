@@ -1,0 +1,67 @@
+int main()
+{
+	int n=1;
+	int m=2;
+	switch(n)
+	{
+		case 1:
+		m++;
+		case 2:
+		n++;
+		case 3:
+			switch(n)
+			{
+				case 1:n++;
+				case 2:m++,n++;break;
+			}
+			case 4:m++;
+			break;
+			default:
+				break;
+				
+	}
+	printf("m=%d,n=%d\n",m,n);
+	return 0;
+}                         
+outchar的用法
+#include<stdio.h>
+int main()
+{
+	int ret=0;
+	int ch=0;
+	
+	
+	
+	char password[20]={0};
+	printf("请输入密码:>");
+	scanf("%s",password);//输入密码并存放在password数组
+	while(ch=getchar() !=EOF)
+	{
+	 	putchar(ch);
+	 }
+	 printf("请确认(y/n):>");
+	 ret=getchar();
+	 if(ret=='y')
+	 {
+	 	printf("确认成功\n");
+	 	
+	 }
+	 else
+	 {
+	 	printf("放弃确认\n");
+	 }
+	return 0;
+}
+outchar的用法
+int main()
+{
+	int ch=0;
+	while(ch=getchar()!=EOF)
+	{
+		if(ch<'0'||ch>'9')
+		continue;
+		putchar(ch);
+	}
+	
+	return 0;
+}
